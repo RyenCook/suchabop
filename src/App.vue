@@ -1,16 +1,28 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/portfolio">Portfolio</router-link> |
-      <router-link to="/films">Films</router-link> |
-      <router-link to="/music">Music</router-link> |
-      <router-link to="/about">About</router-link> |
-      <router-link to="/archive">Archive</router-link>
+    
+  <div class="container">
+    <div class="columns">
+      <div class="column col-11">
+        <router-view/>
+      </div>
+      <div class="column col-1">
+        <ul>
+          <li><router-link to="/">Home</router-link></li>
+          <li><router-link to="/portfolio">Portfolio</router-link></li>
+          <li><router-link to="/films">Films</router-link></li>
+          <li><router-link to="/music">Music</router-link></li>
+          <li><router-link to="/about">About</router-link></li>
+          <li><router-link to="/archive">Archive</router-link></li>
+        </ul>
+      </div>
     </div>
-    <router-view/>
   </div>
+    
+</div>
 </template>
+
+
 
 <style lang="scss">
 #app {
@@ -21,7 +33,12 @@
   color: #2c3e50;
 }
 
-#nav {
+ul {
+  list-style-type: none;
+  margin: 0;
+}
+
+/*#nav {
   padding: 30px;
 
   a {
@@ -32,5 +49,5 @@
       color: #42b983;
     }
   }
-}
+}*/
 </style>
